@@ -545,7 +545,7 @@ void vos_trace(v_U8_t module, v_U8_t code, v_U8_t session, v_U32_t data)
   This function will be called from vos_preOpen, we will have lock available
   to use ASAP.
   ----------------------------------------------------------------------------*/
-VOS_STATUS vos_trace_spin_lock_init()
+VOS_STATUS vos_trace_spin_lock_init(void)
 {
     spin_lock_init(&ltraceLock);
 
