@@ -99,7 +99,7 @@ struct s_vos_mem_struct
  * External Function implementation
  * ------------------------------------------------------------------------*/
 #ifdef MEMORY_DEBUG
-void vos_mem_init()
+void vos_mem_init(void)
 {
    /* Initalizing the list with maximum size of 60000 */
    hdd_list_init(&vosMemList, 60000);  
@@ -107,7 +107,7 @@ void vos_mem_init()
    return; 
 }
 
-void vos_mem_clean()
+void vos_mem_clean(void)
 {
     v_SIZE_t listSize;
     hdd_list_size(&vosMemList, &listSize);
@@ -175,7 +175,7 @@ void vos_mem_clean()
     }
 }
 
-void vos_mem_exit()
+void vos_mem_exit(void)
 {
     if (memory_dbug_flag)
     {
